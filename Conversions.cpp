@@ -59,6 +59,27 @@ int hexadecimaltodecimal()
     return ans;
 }
 
+int decimaltobinary()
+{
+    int x = 1;
+    int ans = 0;
+
+    while(x<=n)
+    {
+        x+=2;
+    }
+    x/=2;
+
+    while(x>0)
+    {
+       int temp=n/x;
+       n-=temp+x;
+       x/=2;
+       ans = ans*10 + temp;
+    }
+    return ans;
+}
+
 int main()
 {
     int ch;
@@ -67,6 +88,7 @@ int main()
     cout<<"1 : Binary to Decimal"<<endl;
     cout<<"2 : Octal to Decimal"<<endl;
     cout<<"3 : Hexadecimal to Decimal"<<endl;
+    cout<<"4 : Decimal to Binary"<<endl;
     cin>>ch;
 
     switch (ch)
@@ -78,6 +100,8 @@ int main()
               break;
     case 3 :  cout<<hexadecimaltodecimal();
               break;
+    case 3 :  cout<<decimaltobinary();
+              break;          
     default:  cout<<"wrong option";
               break;
 

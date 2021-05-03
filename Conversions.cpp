@@ -61,9 +61,13 @@ int hexadecimaltodecimal()
 
 int decimaltobinary()
 {
+
+    int n;
+    cout<<"Enter Decimal number : ";
+    cin>> n;
     int x = 1;
     int ans = 0;
-
+    
     while(x<=n)
     {
         x+=2;
@@ -83,6 +87,10 @@ int decimaltobinary()
 
 int decimaltooctal()
 {
+
+    int n;
+    cout<<"Enter Decimal number : ";
+    cin>> n;
     int x = 1;
     int ans = 0;
 

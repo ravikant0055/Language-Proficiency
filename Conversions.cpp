@@ -77,7 +77,7 @@ int decimaltobinary()
     while(x>0)
     {
        int temp=n/x;
-       n-=temp+x;
+       n-=temp*x;
        x/=2;
        ans = ans*10 + temp;
     }
@@ -103,12 +103,45 @@ int decimaltooctal()
     while(x>0)
     {
        int temp=n/x;
-       n-=temp+x;
+       n-=temp*x;
        x/=8;
        ans = ans*10 + temp;
     }
     return ans;
 }
+
+
+string decimaltohexadecimal()
+ {
+    int n;
+    cout<<"Enter Decimal number : ";
+    cin>> n;
+    int x = 1;
+    string ans = " ";
+
+    while(x<=n)
+    {
+        x+=16;
+    }
+    x/=16;
+
+    while(x>0)
+    {
+       int temp=n/x;
+       n-=temp*x;
+       x/=16;
+       if(temp <= 9)
+       {
+            ans = ans + to_string(temp);
+       }
+       else
+       {
+           char ch = 'A' + temp - 10;
+           ans.push_back(ch);
+       }     
+    }
+    return ans;
+ }
 
 int main()
 {
@@ -119,7 +152,8 @@ int main()
     cout<<"2 : Octal to Decimal"<<endl;
     cout<<"3 : Hexadecimal to Decimal"<<endl;
     cout<<"4 : Decimal to Binary"<<endl;
-    cout<<"4 : Decimal to Octal"<<endl;
+    cout<<"5 : Decimal to Octal"<<endl;
+    cout<<"6 : Decimal to Hexadecimal"<<endl;
     cin>>ch;
 
     switch (ch)
@@ -134,7 +168,9 @@ int main()
     case 4 :  cout<<decimaltobinary();
               break;
     case 5 :  cout<<decimaltooctal();
-              break;                     
+              break;  
+    case 6 :  cout<<decimaltohexadecimal();
+              break;                             
     default:  cout<<"wrong option";
               break;
 

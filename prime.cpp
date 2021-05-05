@@ -5,14 +5,14 @@ void prime(){
     int n,i;
     cout<<"Dude enter a number : ";
     cin>>n;
-    for(i=2;i<n;i++){
+    for(i=2;i<=sqrt(n);i++){
         if(n%i==0){
-            cout<<"Aww bruh your num is not prime"<<endl;
+            cout<<"NON PRIME"<<endl;
             break;
         }
     }
     if(i==n){
-        cout<<"Congro dude your num is prime"<<endl;
+        cout<<"PRIME NUMBER"<<endl;
     }
 }
 
@@ -22,7 +22,7 @@ void allprime(){
     cin>>a>>b;
     for(int n=a; n<=b; n++){
         int i;
-        for(i=2;i<n;i++){
+        for(i=2;i<=sqrt(n);i++){
              if(n%i==0){
                  break;
              }

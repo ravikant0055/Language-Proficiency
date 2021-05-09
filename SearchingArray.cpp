@@ -14,9 +14,9 @@ int linearSearch(int arr[], int n, int x)
 }
 
 int binarySearch(int arr[], int n, int x)
-{
+{ 
     int s=0;
-    int e=0;
+    int e=n;
     while(s<=e)
     {
         int mid = (s+e)/2;
@@ -62,9 +62,9 @@ int main()
 
      switch(ch)
      {
-         case 1 : cout<<"Search element is : "<<linearSearch(arr , n , x);
+         case 1 : cout<<"Search element index is : "<<linearSearch(arr , n , x);
                   break;
-         case 2 : cout<<"Serach element is : "<<binarySearch(arr, n , x);
+         case 2 : cout<<"Serach element index is : "<<binarySearch(arr, n , x);
                   break;
 
          default : cout<<"Wrong num"; 

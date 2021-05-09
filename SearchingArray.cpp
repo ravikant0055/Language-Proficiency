@@ -56,18 +56,19 @@ int main()
 
      int ch;
      cout<<"Enter your choice"<<endl;
+     cout<<"1.Linear Search"<<endl;
+     cout<<"2.Binary Search"<<endl;
      cin>>ch;
 
      switch(ch)
      {
+         case 1 : cout<<"Search element is : "<<linearSearch(arr , n , x);
+                  break;
+         case 2 : cout<<"Serach element is : "<<binarySearch(arr, n , x);
+                  break;
 
-     case 1 : cout<<"Search element is : "<<linearSearch(arr , n , x);
-              break;
-     case 2 : cout<<"Serach element is : "<<binarySearch(arr, n , x);
-              break;
-
-     default : cout<<"Wrong num"; 
-
+         default : cout<<"Wrong num"; 
      }         
+     
      return 0;
 }

@@ -1,9 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-int s(int arr[], int n)
+int SelectionSort(int arr[], int n)
 {
     int i;
-
     for(i=0; i<n-1; i++)
     {
         for(int j=i+1; j<n; j++)
@@ -20,6 +19,24 @@ int s(int arr[], int n)
     return arr[i];
 }
 
+int BubbleSort(int arr[], int n)
+{
+    int i;
+    for(int j=1; j<n; j++)
+    {
+       for(i=0; i<n-j; i++)
+       {
+           if(arr[i]>arr[i+1])
+           {
+              int temp = arr[i];
+              arr[i] = arr[i+1];
+              arr[i+1] = temp;
+           }   
+       }
+    }
+    return arr[i];
+}
+
 int main()
 {
     int n;
@@ -33,7 +50,8 @@ int main()
         cin>>arr[i];
     }
 
-    s(arr,n);
+    SelectionSort(arr, n);
+    BubbleSort(arr, n);
     
     cout<<"Sorted array is : ";
     for(int i=0; i<n; i++)

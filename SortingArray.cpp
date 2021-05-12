@@ -37,6 +37,16 @@ int BubbleSort(int arr[], int n)
     return arr[i];
 }
 
+void printarray(int arr[], int n)
+{
+    cout<<"Sorted array is : ";
+    for(int i=0; i<n; i++)
+    {
+        
+        cout<<arr[i]<<" ";
+    }
+}
+
 int main()
 {
     int n;
@@ -58,22 +68,15 @@ int main()
     switch (ch)
     {
         case 1:  SelectionSort(arr, n);
+                 printarray(arr, n);
                  break;
 
         case 2:  BubbleSort(arr, n);
+                 printarray(arr, n);
                  break;         
         
         default: cout<<"Wrong Option";
                  break;
-    }
-    
-    
-    
-    cout<<"Sorted array is : ";
-    for(int i=0; i<n; i++)
-    {
-        
-        cout<<arr[i]<<" ";
     }
     
     return 0;

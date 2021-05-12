@@ -49,9 +49,25 @@ int main()
     {
         cin>>arr[i];
     }
+    
+    int ch;
+    cout<<"Choice the Option"<<endl;
+    cout<<"1. Selection Sort"<<endl;
+    cout<<"2. Bubble Sort"<<endl;
+    cin>>ch;
+    switch (ch)
+    {
+        case 1:  SelectionSort(arr, n);
+                 break;
 
-    SelectionSort(arr, n);
-    BubbleSort(arr, n);
+        case 2:  BubbleSort(arr, n);
+                 break;         
+        
+        default: cout<<"Wrong Option";
+                 break;
+    }
+    
+    
     
     cout<<"Sorted array is : ";
     for(int i=0; i<n; i++)

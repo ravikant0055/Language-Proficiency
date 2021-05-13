@@ -37,6 +37,25 @@ int BubbleSort(int arr[], int n)
     return arr[i];
 }
 
+int InsertionSort(int arr[], int n)
+{   
+    int i;
+    for(i=0; i<n; i++)
+    {
+       int key = arr[i];
+       int j = i-1;
+
+       while(arr[j]>key && j>=0)
+       {
+          arr[j+1] = arr[j];
+          j--;
+       }
+
+       arr[j+1] = key;
+    }
+    return arr[i];
+}
+
 void printarray(int arr[], int n)
 {
     cout<<"Sorted array is : ";
@@ -64,6 +83,7 @@ int main()
     cout<<"Choice the Option"<<endl;
     cout<<"1. Selection Sort"<<endl;
     cout<<"2. Bubble Sort"<<endl;
+    cout<<"3. Insertion Sort"<<endl;
     cin>>ch;
     switch (ch)
     {
@@ -75,6 +95,10 @@ int main()
                  printarray(arr, n);
                  break;         
         
+        case 3:  InsertionSort(arr, n);
+                 printarray(arr, n);
+                 break;
+
         default: cout<<"Wrong Option";
                  break;
     }
